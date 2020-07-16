@@ -78,7 +78,7 @@ loadUser = (data) => {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
-      fetch('https://git.heroku.com/frozen-peak-84958.git/imageurl', {
+      fetch('https://frozen-peak-84958.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -88,7 +88,7 @@ loadUser = (data) => {
       .then(response => response.json())
       .then( response => {
         if (response) {
-          fetch('https://git.heroku.com/frozen-peak-84958.git/image', {
+          fetch('https://frozen-peak-84958.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

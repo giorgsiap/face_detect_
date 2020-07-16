@@ -19,7 +19,7 @@ class Signin extends React.Component {
 
 	onSubmitSignIn = (event) => {
 		event.preventDefault();
-		fetch('https://git.heroku.com/frozen-peak-84958.git/signin', {
+		fetch('https://frozen-peak-84958.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
